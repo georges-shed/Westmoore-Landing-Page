@@ -1,0 +1,586 @@
+/*
+@File: Zebu Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+** - Preloader Area CSS
+** - Navbar Area CSS
+** - Book Banner Area CSS
+** - Book Area CSS
+** - About Area CSS
+** - Book Feature Area CSS
+** - Newsletter Area CSS
+** - Reviews Area CSS
+** - Fun Facts Area CSS
+** - Pricing Area CSS
+** - Author Area CSS
+** - Blog Area CSS
+** - Contact Area CSS
+** - Products Banner Area CSS
+** - Products Feature Area CSS
+** - Video Area CSS
+** - Why Choose Area CSS
+** - Products Area CSS
+** - FAQ Area CSS
+** - Gallery Area CSS
+** - App Download Area CSS
+** - App Banner Area CSS
+** - App Feature Area CSS
+** - Screenshot Area CSS
+** - Team Area CSS
+** - Testimonial Area CSS
+** - Saas Banner Area CSS
+** - Saas Feature Area CSS
+** - Overview Area CSS
+** - Page Title Area CSS
+** - Blog Details Area CSS
+** - Sidebar Widget Area CSS
+** - Product Details Area CSS
+** - Copy Right CSS
+** - Go Top CSS
+
+*/
+/*================================================
+Default CSS
+=================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --mainfontFamily: "Barlow", sans-serif;
+  --optionalfontFamily: "Barlow", sans-serif;
+  --mainColor: #E67000;
+  --optionalColor: #6b6b84;
+  --whiteColor: #ffffff;
+  --blackColor: #031521;
+  --fontSize: 16px;
+  --transition: .5s;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--optionalColor);
+  font-family: var(--mainfontFamily);
+  font-size: var(--fontSize);
+}
+
+a {
+  transition: var(--transition);
+  color: var(--blackColor);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: var(--mainColor);
+  outline: 0;
+}
+
+button:focus, input:focus {
+  outline: 0;
+}
+
+p {
+  color: var(--optionalColor);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: var(--fontSize);
+  font-family: var(--optionalfontFamily);
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+.d-table-cell {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--blackColor);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.default-btn {
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  transition: var(--transition);
+  border-radius: 30px;
+  opacity: 1;
+  font-family: var(--optionalfontFamily);
+  font-weight: 500;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.default-btn span {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 30px;
+  opacity: 1;
+}
+.default-btn:hover {
+  color: var(--whiteColor) !important;
+}
+.default-btn:hover span {
+  width: 225%;
+  height: 562.5px;
+}
+.default-btn i {
+  font-size: 12px;
+  position: relative;
+  top: -1px;
+  margin-left: 10px;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 45px;
+}
+.section-title h2 {
+  font-size: 45px;
+  margin-bottom: 14px;
+}
+.section-title p {
+  line-height: 1.8;
+}
+
+.buy-now-btn {
+  left: 20px;
+  z-index: 99;
+  top: 50%;
+  position: fixed;
+  transform: translateY(-50%);
+  border-radius: 30px;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #82b440;
+  padding: 10px 20px 10px 42px;
+  box-shadow: 0 1px 20px 1px #82b440;
+  font-size: 13px;
+  font-weight: 600;
+}
+.buy-now-btn img {
+  top: 50%;
+  left: 20px;
+  width: 15px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.buy-now-btn:hover {
+  background-color: #ff5740;
+  color: #ffffff !important;
+}
+
+/*================================================
+Navbar Area CSS
+=================================================*/
+.navbar {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  background-color: var(--whiteColor) !important;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.navbar-light {
+  background-color: transparent !important;
+}
+.navbar-light .logo h3 {
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.navbar-light .navbar-nav {
+  margin: auto;
+}
+.navbar-light .navbar-nav .nav-item {
+  position: relative;
+  padding: 0;
+}
+.navbar-light .navbar-nav .nav-item a {
+  font-size: var(--fontSize);
+  color: var(--blackColor);
+  text-transform: capitalize;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 600;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+.navbar-light .navbar-nav .nav-item a:hover, .navbar-light .navbar-nav .nav-item a:focus, .navbar-light .navbar-nav .nav-item a.active {
+  color: var(--mainColor);
+  position: relative;
+  transition: var(--transition);
+}
+.navbar-light .navbar-nav .nav-item a i {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.navbar-light .navbar-nav .nav-item:last-child a {
+  margin-right: 0;
+}
+.navbar-light .navbar-nav .nav-item:first-child a {
+  margin-left: 0;
+}
+.navbar-light .navbar-nav .nav-item:hover a, .navbar-light .navbar-nav .nav-item.active a {
+  color: var(--mainColor);
+  transition: var(--transition);
+}
+.navbar-light .others-option .option-item .social-icon {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.navbar-light .others-option .option-item .social-icon li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 5px;
+}
+.navbar-light .others-option .option-item .social-icon li:last-child {
+  margin-right: 0;
+}
+.navbar-light .others-option .option-item .social-icon li i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: var(--transition);
+  color: var(--blackColor);
+}
+.navbar-light .others-option .option-item .social-icon li i:hover {
+  background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  color: var(--whiteColor);
+}
+
+/*================================================
+Book Banner Area CSS
+=================================================*/
+.book-banner-area {
+  position: relative;
+  z-index: 1;
+  height: 750px;
+  background-image: url(../../assets/img/book-banner-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.book-banner-area::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0.9;
+  z-index: -1;
+}
+.book-banner-area .main-banner-content p {
+  color: var(--blackColor);
+}
+.book-banner-area .main-banner-content .text p {
+  color: var(--blackColor);
+}
+
+.main-banner-content {
+  position: relative;
+  z-index: 1;
+}
+.main-banner-content span {
+  font-size: 18px;
+  color: var(--mainColor);
+  font-weight: 500;
+}
+.main-banner-content h1 {
+  font-size: 80px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.main-banner-content p {
+  margin-bottom: 0;
+}
+.main-banner-content .banner-btn {
+  margin-top: 30px;
+}
+.main-banner-content .text {
+  margin-top: 10px;
+}
+.main-banner-content .text p {
+  margin-bottom: 0;
+}
+.main-banner-content .banner-holder {
+  margin-top: 30px;
+}
+.main-banner-content .banner-holder a {
+  margin-right: 10px;
+}
+.main-banner-content .banner-holder a:last-child {
+  margin-right: 0;
+}
+
+
+/*================================================
+Contact Area CSS
+=================================================*/
+.contact-form form .form-group {
+  margin-bottom: 15px;
+}
+.contact-form form .form-control {
+  height: 55px;
+  padding: 0 15px;
+  line-height: initial;
+  color: var(--blackColor);
+  background-color: transparent;
+  border: 1px solid #cecfdf;
+  border-radius: 2px;
+  transition: var(--transition);
+  box-shadow: unset !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+.contact-form form .form-control:focus {
+  border: 1px solid var(--mainColor);
+}
+.contact-form form .form-control::-moz-placeholder {
+  color: var(--optionalColor);
+}
+.contact-form form .form-control::placeholder {
+  color: var(--optionalColor);
+}
+.contact-form form textarea.form-control {
+  height: auto !important;
+  padding-top: 15px;
+}
+.contact-form .send-btn {
+  margin-top: 10px;
+}
+.contact-form .with-errors ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.contact-form .with-errors ul li {
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+}
+.contact-form #msgSubmit {
+  margin-bottom: 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+.contact-form #msgSubmit.text-danger {
+  margin-top: 20px !important;
+}
+
+
+/*================================================
+Why Choose Area CSS
+=================================================*/
+.why-choose-area {
+  background-color: #fafafa;
+}
+
+.why-choose-content {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  padding: 30px;
+  background-color: #f3f3f3;
+  transition: var(--transition);
+  border-radius: 5px;
+}
+.why-choose-content .icon i {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  background-color: #fafafa;
+  color: var(--mainColor);
+  font-size: 45px;
+  border-radius: 50px;
+  transition: var(--transition);
+  text-align: center;
+}
+.why-choose-content h3 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+.why-choose-content p {
+  margin-bottom: 0;
+  transition: var(--transition);
+  font-size: 15px;
+}
+.why-choose-content::before {
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  z-index: -1;
+  height: 100%;
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--mainColor);
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  transition: var(--transition);
+}
+.why-choose-content:hover {
+  transform: translateY(-10px);
+}
+.why-choose-content:hover::before {
+  width: 100%;
+}
+.why-choose-content:hover .icon i {
+  background-color: var(--whiteColor);
+  color: var(--mainColor);
+}
+.why-choose-content:hover h3 {
+  color: var(--whiteColor);
+}
+.why-choose-content:hover p {
+  color: var(--whiteColor);
+}
+.why-choose-content.top1 {
+  margin-top: 30px;
+}
+.why-choose-content.top2 {
+  margin-top: 0;
+}
+.why-choose-content.top3 {
+  margin-top: 0;
+}
+.why-choose-content.top4 {
+  margin-top: -30px;
+}
+
+
+
+/*================================================
+FAQ Area CSS
+=================================================*/
+.faq-area {
+  background-color: #fafafa;
+}
+
+.faq-accordion .accordion {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.faq-accordion .accordion .accordion-item {
+  display: block;
+  background: #f3f3f3;
+  margin-bottom: 10px;
+}
+.faq-accordion .accordion .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.faq-accordion .accordion .accordion-title {
+  padding: 25px 40px 20px 20px;
+  color: var(--blackColor);
+  position: relative;
+  display: block;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+}
+.faq-accordion .accordion .accordion-title i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blackColor);
+  font-size: 20px;
+  transition: var(--transition);
+}
+.faq-accordion .accordion .accordion-title.active i::before {
+  content: "\f068";
+  color: var(--mainColor);
+}
+.faq-accordion .accordion .accordion-content {
+  display: none;
+  position: relative;
+  padding: 18px 20px;
+  border-top: 1px solid var(--mainColor);
+  color: var(--optionalColor);
+}
+.faq-accordion .accordion .accordion-content.show {
+  display: block;
+}
+

@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
             <div class="logo">
-    <a href="app-landing.php">
+    <a href="index.php">
         <img src="images/westmoor-logo-lg.png" alt="Westmoor Logo" style="width: 100px; height: auto;">
     </a>
 </div>
@@ -68,7 +68,7 @@
                         </li>
                     </ul>
 
-                    <div class="others-option">
+                    <!-- <div class="others-option">
                         <div class="d-flex align-items-center">
                             <div class="option-item">
                                 <ul class="social-icon">
@@ -87,7 +87,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </nav>

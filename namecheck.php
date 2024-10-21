@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
 
     echo '<div id="formContainer" style="margin:auto;margin-bottom: 20px; text-align: center;">
             <form id="ukForm" onsubmit="event.preventDefault(); submitForm(\'UK\');">
-                <input type="text" name="search" placeholder="UK Name Check">
+                <input type="text" name="search" placeholder="Enter your desired company name">
                 <button type="submit">Search</button>
             </form>
           </div>';
@@ -410,12 +410,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $country = $_POST['load_form'];
       if ($country === 'UK') {
           echo '<form id="ukForm" onsubmit="event.preventDefault(); submitForm(\'UK\');" style="display: flex; align-items: center; border-radius: 50px; background-color: white; padding: 0; width: 80%; margin: auto;">
-                  <input type="text" name="search" placeholder="UK NameCheck" style="flex: 1; border: none; padding: 15px 20px; border-radius: 50px 0 0 50px; outline: none;">
+                  <input type="text" name="search" placeholder="Enter your desired company name" style="flex: 1; border: none; padding: 15px 20px; border-radius: 50px 0 0 50px; outline: none;">
                   <button type="submit" style="padding: 15px 20px; background-color: #E67000; color: white; border: none; border-radius: 0 50px 50px 0; cursor: pointer;">Search</button>
                 </form>';
       } elseif ($country === 'Ireland') {
           echo '<form id="irelandForm" onsubmit="event.preventDefault(); submitForm(\'Ireland\');" style="display: flex; align-items: center; border-radius: 50px; background-color: white; padding: 0; width: 80%; margin: auto;">
-                  <input type="text" name="company_name" placeholder="Ireland NameCheck" style="flex: 1; border: none; padding: 15px 20px; border-radius: 50px 0 0 50px; outline: none;">
+                  <input type="text" name="company_name" placeholder="Enter your desired company name" style="flex: 1; border: none; padding: 15px 20px; border-radius: 50px 0 0 50px; outline: none;">
                   <button type="submit" style="padding: 15px 20px; background-color: #E67000; color: white; border: none; border-radius: 0 50px 50px 0; cursor: pointer;">Search</button>
                 </form>';
       }

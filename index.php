@@ -54,18 +54,16 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#faq " class="nav-link">
-                                FAQ
-                            </a>
-                        </li>
-
-                       
-
 
                         <li class="nav-item">
                             <a href="#contact" class="nav-link">
                                 Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#faq " class="nav-link">
+                                FAQ
                             </a>
                         </li>
                     </ul>
@@ -96,7 +94,7 @@
         <!-- End Navbar Area -->
 
         <!-- Start App Banner Area -->
-        <div id="home" class="app-banner-area" style="background-image: url('images/hero-image.png'); background-size: cover; background-position: center; height: 70vh;">
+        <div id="home" class="app-banner-area" style="background-image: url('images/hero-image.png'); background-size: cover; background-position: center; height: 50vh;">
     <div class="d-flex justify-content-center align-items-center h-100">
         <div class="container text-center text-white">
             <h1 class="display-4 text-white font-weight-bold mb-3" style="padding-bottom: 10px;font-weight:700">Check Your Company Name <br> Availability</h1>

@@ -188,7 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
 
         $("#formContainer").empty();
         $("#responseContainer").empty();
-        $.post("namecheck.php", { load_form: country }, function(response) {
+        $.post("/namecheck.php", { load_form: country }, function(response) {
             $("#formContainer").html(response);
         });
     }
@@ -197,9 +197,9 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
         var formData = country === "UK" ? $("#ukForm").serialize() : $("#irelandForm").serialize();
         formData += "&country=" + country;
 
-        $.post("/Westmoore-Landing-Page/zebu-multipurpose-landing-page-html-template-2024-07-26-00-35-13-utc/zebu-multipurpose-landing-page-html-template/zebu/namecheck.php", formData, function(response) {
-            $("#responseContainer").html(response);
-        });
+       $.post("/namecheck.php", formData, function(response) {
+    $("#responseContainer").html(response);
+});
     }
     </script>';
 }
@@ -442,9 +442,10 @@ function submitForm(country) {
   
   formData += "&country=" + country;
 
-  $.post("/Westmoore-Landing-Page/namecheck.php", formData, function(response) {
-      $("#responseContainer").html(response);
-  });
+  $.post("/namecheck.php", formData, function(response) {
+    $("#responseContainer").html(response);
+});
+
 }
 
 // Event listener for the Continue To Form button click

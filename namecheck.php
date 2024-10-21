@@ -81,6 +81,19 @@ echo '<style>
   border: 1px solid #E67000;
 }
 
+/* Hover effect for .active button */
+#buttonContainer .active:hover {
+  background-color: transparent;
+  color: #E67000;
+  border: 1px solid #E67000;
+}
+
+/* Hover effect for non-active button */
+#buttonContainer button:not(.active):hover {
+  background-color: #E67000;
+  color: white;
+}
+
 #formContainer {
   display: flex;
   justify-content: center;

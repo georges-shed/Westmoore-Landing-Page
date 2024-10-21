@@ -20,7 +20,7 @@
 
     <title>GetCo Namecheck</title>
 
-    <link rel="icon" type="image/png" href="images/westmoor-logo-lg.png">
+    <link rel="icon" type="image/png" href="images/getco-favicon.jpg">
 </head>
 
 
